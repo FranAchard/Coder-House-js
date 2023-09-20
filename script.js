@@ -1,37 +1,66 @@
-// 
-var edad = 18;
+// Definimos un array con las cartas del juego
+const cartas = [
+    "A", "A", "B", "B", "C", "C", "D", "D",
+    "E", "E", "F", "F", "G", "G", "H", "H"
+];
 
-if (edad >= 18) {
-    console.log("La persona puede conducir un automóvil.");
-} else {
-    console.log("La persona no puede conducir un automóvil, es menor de edad.");
+let cartasDestapadas = [];
+let aciertos = 0;
+let movimientos = 0;
+
+// Función para barajar el array de cartas
+function barajarCartas() {
+    cartas.sort(() => Math.random() - 0.5);
 }
 
+// Función para destapar una carta
+function destapar(id) {
+    if (cartasDestapadas.length < 2) {
+        const carta = cartas[id];
+        document.getElementById(id.toString()).textContent = carta;
+        cartasDestapadas.push({ id, carta });
 
-//
-for (var i = 1; i <= 10; i++) {
-    console.log(i);
-}
+        if (cartasDestapadas.length === 2) {
+            movimientos++;
+            document.getElementById("movimientos").textContent = `Movimientos: ${movimientos}`;
 
-//
-const readline = require('readline');
+            if (cartasDestapadas[0].carta === cartasDestapadas[1].carta) {
+                aciertos++;
+                document.getElementById("aciertos").textContent = `Aciertos: ${aciertos}`;
+                cartasDestapadas = [];
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
-function realizarCalculo(num1, num2, operacion) {
-    switch (operacion) {
-        case 'suma':
-            return num1 + num2;
-        case 'resta':
-            return num1 - num2;
-        case 'multiplicacion':
-            return num1 * num2;
-        case 'division':
-            return num1 / num2;
-        default:
-            return 'Operación no válida';
+                if (aciertos === cartas.length / 2) {
+                    alert("¡Has ganado!");
+                }
+            } else {
+                setTimeout(() => {
+                    ocultarCartas();
+                }, 1000);
+            }
+        }
     }
 }
+
+// Función para ocultar las cartas destapadas
+function ocultarCartas() {
+    for (const carta of cartasDestapadas) {
+        document.getElementById(carta.id.toString()).textContent = "";
+    }
+    cartasDestapadas = [];
+}
+
+// Función para inicializar el juego
+function iniciarJuego() {
+    barajarCartas();
+    document.getElementById("movimientos").textContent = "Movimientos: 0";
+    document.getElementById("aciertos").textContent = "Aciertos: 0";
+    aciertos = 0;
+    movimientos = 0;
+
+    const botones = document.querySelectorAll("button");
+    for (let i = 0; i < botones.length; i++) {
+        botones[i].addEventListener("click", () => destapar(i));
+    }
+}
+
+iniciarJuego();
