@@ -1,42 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
-*{
-    margin: 0;
-    padding: 0;
+body {
+    background-color: #0A091B;
 }
-body{
-    background: rgba(40, 34, 106, 0.8);
-}
-.titulo{
-    display: flex;
+
+.title {
+    display:flex;
+    justify-content:center;
     align-items: center;
-    justify-content: center;
-    font-size: 45px;
-    font-family: 'Poppins', sans-serif;
+    color: #C0B85B;
+    font-size: 50px;
 }
-table{
+
+.memory {
+    width: 250px;
+    border: 1px solid #C0B85B;
+}
+.juegos{
+    width: 300px;
+    border: 3px solid #C0B85B;
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-td{
-    width: 150px;
-    height: 50px;
-}
-.botones{
-    width: 150px;
-    height: 50px;
-}
-.section2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-img{
-    height: 120px;
+    flex-direction:column;
+    color: #C0B85B;
+    align-items:center;
 }

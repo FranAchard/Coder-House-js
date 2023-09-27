@@ -8,45 +8,15 @@
 </head>
 <body>
     <main>
-        <section class="section1">
-            <h2 class="titulo">Juego de Memoria</h2>
-            <table>
-                <tr>
-                    <td><img id="0" src="./Img/blank.png" onclick="destapar(0)" class="cartas"></td>
-                    <td><img id="1" src="./Img/blank.png" onclick="destapar(1)" class="cartas"></td>
-                    <td><img id="2" src="./Img/blank.png" onclick="destapar(2)" class="cartas"></td>
-                    <td><img id="3" src="./Img/blank.png" onclick="destapar(3)" class="cartas"></td>
-                </tr>
-                <tr>
-                    <td><img id="4" src="./Img/blank.png" onclick="destapar(4)" class="cartas"></td>
-                    <td><img id="5" src="./Img/blank.png"  onclick="destapar(5)" class="cartas"></td>
-                    <td><img id="6" src="./Img/blank.png" onclick="destapar(6)" class="cartas"></td>
-                    <td><img id="7" src="./Img/blank.png"  onclick="destapar(7)" class="cartas"></td>
-                </tr>
-                <tr>
-                    <td><img id="8" src="./Img/blank.png"  onclick="destapar(8)" class="cartas"></td>
-                    <td><img id="9" src="./Img/blank.png"  onclick="destapar(9)" class="cartas"></td>
-                    <td><img id="10" src="./Img/blank.png"  onclick="destapar(10)" class="cartas"></td>
-                    <td><img id="11" src="./Img/blank.png"  onclick="destapar(11)" class="cartas"></td>
-                </tr>
-                <tr>
-                    <td><img id="12" src="./Img/blank.png"  onclick="destapar(12)" class="cartas"></td>
-                    <td><img id="13" src="./Img/blank.png" onclick="destapar(13)" class="cartas"></td>
-                    <td><img id="14" src="./Img/blank.png"  onclick="destapar(14)" class="cartas"></td>
-                    <td><img id="15" src="./Img/blank.png" onclick="destapar(15)" class="cartas"></td>
-                </tr>
-            </table>
-        </section>
-        <section class="section2">
-            <button id="startButton" onclick="iniciarJuego()">Start</button>
-            <h2 id="aciertos" class="estadisticas">Aciertos: 0</h2>
-            <h2 id="t-restante" class="estadisticas">Tiempo restante: 30 Segundos</h2>
-            <h2 id="movimientos" class="estadisticas">Movimientos: 0</h2>
+        <header>
+        <h1 class="title">Achard Games</h1>
+        </header>
+        <section>
+            <div class="juegos">
+                <a href="./Memory-Card/Memory-Card.html"><img class="memory" src="./Img/Juego-1.png"></a>
+                <h3>Juego de Memoria</h3>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>Achard Games</p>
-    </footer>
-    <script src="./script.js"></script>
 </body>
 </html>

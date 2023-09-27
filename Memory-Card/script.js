@@ -1,8 +1,8 @@
 const cartas = [
-    "./Img/Trunks.png", "./Img/gohan.png", "./Img/goku.png", "./Img/vegeta.png",
-    "./Img/vegeta.png", "./Img/vegito.png", "./Img/gohan.png", "./Img/vegito.png",
-    "./Img/goku.png", "./Img/picoro.png", "./Img/gogeta.png", "./Img/broly.png",
-    "./Img/gogeta.png", "./Img/broly.png", "./Img/picoro.png", "./Img/Trunks.png"
+    "../Img/Trunks.png", "../Img/gohan.png", "../Img/goku.png", "../Img/vegeta.png",
+    "../Img/vegeta.png", "../Img/vegito.png", "../Img/gohan.png", "../Img/vegito.png",
+    "../Img/goku.png", "../Img/picoro.png", "../Img/gogeta.png", "../Img/broly.png",
+    "../Img/gogeta.png", "../Img/broly.png", "../Img/picoro.png", "../Img/Trunks.png"
 ];
 
 const maxMovimientos = 15; // Máximo número de movimientos permitidos
@@ -66,7 +66,7 @@ function destapar(id) {
 // Función para ocultar las cartas destapadas
 function ocultarCartas() {
     for (const carta of cartasDestapadas) {
-        carta.imagen.src = "./Img/blank.png";
+        carta.imagen.src = "../Img/blank.png";
         carta.imagen.removeAttribute("data-destapada");
     }
     cartasDestapadas = [];
