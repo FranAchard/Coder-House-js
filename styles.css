@@ -22,3 +22,7 @@ body {
     color: #C0B85B;
     align-items:center;
 }
+.games{
+    display: flex;
+    gap: 250px;
+}
