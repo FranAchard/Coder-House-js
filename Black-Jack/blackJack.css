@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0A091B;
+    color: #C0B85B;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #11102e;
+    border-radius: 10px;
+}
+
+#player-hand,
+#dealer-hand {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #C0B85B;
+    border-radius: 5px;
+    background-color: #0A091B;
+    width: 300px;
+}
+
+#player-cards,
+#dealer-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#player-score,
+#dealer-score {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #0A091B;
+    color: #C0B85B;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #111027;
+}
